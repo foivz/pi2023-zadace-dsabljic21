@@ -14,7 +14,7 @@ A sada, vrijeme je za prvi korak rada na vašem projektu. 🙂 Za upis/opis vaš
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Domagoj Sabljić | dsabljic21@student.foi.hr | 0016153134 | dsabljic
+Domagoj Sabljić | dsabljic21@student.foi.hr | 0016153134 | dsabljic-foi
 
 
 ## Opis domene
