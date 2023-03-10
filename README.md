@@ -28,4 +28,4 @@ Domagoj Sabljić | dsabljic21@student.foi.hr | 0016153134 | dsabljic21
 
 ## Resursi
 (Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
-Svi resursi nalaze se u mapi _Documentation_.
+Svi resursi nalaze se u mapi [_Documentation_](https://github.com/foivz/pi2023-zadace-dsabljic21/tree/master/Documentation).
