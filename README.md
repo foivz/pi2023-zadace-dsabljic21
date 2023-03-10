@@ -7,8 +7,7 @@ Molim vas izmijenite ovaj dokument kako biste u njemu naveli naziv i kratak opis
 
 A sada, vrijeme je za prvi korak rada na vašem projektu. 🙂 Za upis/opis vašeg programskog proizvoda molimo vas koristite **predložak** koji je naveden u nastavku. Započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta te izbrišite sve što je iznad _Naziva projekta_, kao i sve upute koje su navedene u zagradama u predlošku ispod.
 
-# Naziv projekta
-(U redak iznad navedite naziv projekta koji ste dobili za analizu!)
+# Softver za praćenje rada obrta za usluge čišćenja
 
 ## Podaci o studentu
 
@@ -24,10 +23,9 @@ Domagoj Sabljić | dsabljic21@student.foi.hr | 0016153134 | dsabljic21
 (Vlastitim riječima opišite zahtjeve za izradu ovog programskog proizvoda!)
 
 ## Zadatak
-(U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
 
 [Korisnički zahtjevi](https://github.com/foivz/pi2023-zadace-dsabljic21/blob/master/Korisni%C4%8Dki%20zahtjevi%20-%20obrt%20za%20%C4%8Di%C5%A1%C4%87enje.pdf) za softver za praćenje rada obrta za usluge čišćenja
 
 ## Resursi
-(Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
+
 Svi resursi nalaze se u mapi [_Documentation_](https://github.com/foivz/pi2023-zadace-dsabljic21/tree/master/Documentation).
