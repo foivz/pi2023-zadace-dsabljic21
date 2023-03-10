@@ -20,9 +20,3 @@ Domagoj Sabljić | dsabljic21@student.foi.hr | 0016153134 | dsabljic21
 ## Resursi
 
 Svi resursi nalaze se u mapi [_Documentation_](https://github.com/foivz/pi2023-zadace-dsabljic21/tree/master/Documentation).
-
-```bash
-
-git clone
-
-```
