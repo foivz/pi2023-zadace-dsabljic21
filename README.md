@@ -21,12 +21,8 @@ Domagoj Sabljić | dsabljic21@student.foi.hr | 0016153134 | dsabljic21
 
 Svi resursi nalaze se u mapi [_Documentation_](https://github.com/foivz/pi2023-zadace-dsabljic21/tree/master/Documentation).
 
-```solidity
+```bash
 
-pragma solidity ^0.8.0;
-
-contract Contract {
-  uint256 n;
-}
+git clone
 
 ```
