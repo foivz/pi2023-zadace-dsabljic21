@@ -26,7 +26,7 @@ Domagoj Sabljić | dsabljic21@student.foi.hr | 0016153134 | dsabljic21
 ## Zadatak
 (U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
 
-[Korisnički zahtjevi](https://github.com/foivz/pi2023-zadace-dsabljic21/blob/master/Korisni%C4%8Dki%20zahtjevi%20-%20obrt%20za%20%C4%8Di%C5%A1%C4%87enje.pdf) - Softver za praćenje rada obrta za usluge čišćenja
+[Korisnički zahtjevi](https://github.com/foivz/pi2023-zadace-dsabljic21/blob/master/Korisni%C4%8Dki%20zahtjevi%20-%20obrt%20za%20%C4%8Di%C5%A1%C4%87enje.pdf) za softver za praćenje rada obrta za usluge čišćenja
 
 ## Resursi
 (Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
