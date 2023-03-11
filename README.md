@@ -14,10 +14,10 @@ generalno, redovito, kemijsko čišćenje te čišćenje vanjskih površina i ob
 jednostavniju raspodjelu zaposlenika. Također će se i zaposlenicima olakšati pregled dodijeljenih radnih zadataka i poslova kroz personalizirani raspored.
 
 ## Specifikacija projekta
-(Vlastitim riječima opišite zahtjeve za izradu ovog programskog proizvoda!)
 
 Vlasnica obrta je iskazala želju za uvođenjem programskog rješenja koje će joj omogućiti uvid u sve svoje trenutne zaposlenike, te mogućnost dodavanja
 zaposlenika. Uz to, želi imati i evidenciju svih trenutnih klijenata s njihovim pripadnim kontakt podacima i lokacijama na kojima koriste usluge obrta. 
+
 Dogovaranje usluge s klijentom ne ulazi u opseg programskog rješenja kako vlasnica i dalje želi obavljati razgovor s klijentima osobno kako bi prosudila
 o vrsti potrebne usluge, ali nakon dogovora želi u sustavu evidentirati vrstu usluge, klijenta za kojeg se usluga obavlja, termin izvođenja te zaposlenika/e
 koji će obaviti dogovorenu uslugu. Prilikom evidentiranja potrebna je mogućnost pretrage slobodnih termina i dostupnih zaposlenika. Vlasnica također želi i 
