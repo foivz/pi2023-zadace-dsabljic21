@@ -8,7 +8,8 @@ Domagoj Sabljić | dsabljic21@student.foi.hr | 0016153134 | dsabljic21
 
 
 ## Opis domene
-(Vlastitim riječima opišite domenu ili problem koji pokriva projekt vaše zadaće!)
+
+Traženo programsko rješenje će podržavati rad obrta za usluge čišćenja koje nudi raznovrsne usluge unutar svoje domene djelovanja. Neke od usluga koje nude su generalno, redovito, kemijsko čišćenje te čišćenje vanjskih površina i objekata. Aplikacija će omogućiti vlasniku obrta olakšanu organizaciju poslovanja kao i jednostavniju raspodjelu zaposlenika. Zaposlenicima će se također olakšati pregled dodijeljenih zadataka i poslova kroz samo njima vidljivi raspored.
 
 ## Specifikacija projekta
 (Vlastitim riječima opišite zahtjeve za izradu ovog programskog proizvoda!)
