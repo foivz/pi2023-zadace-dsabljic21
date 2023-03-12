@@ -16,7 +16,7 @@ jednostavniju raspodjelu zaposlenika. Također će se i zaposlenicima olakšati 
 ## Specifikacija projekta
 
 Vlasnica obrta je iskazala želju za uvođenjem programskog rješenja koje će joj omogućiti uvid u sve svoje trenutne zaposlenike, te mogućnost dodavanja
-zaposlenika. Uz to, želi imati i evidenciju svih trenutnih klijenata s njihovim pripadnim kontakt podacima i lokacijama na kojima koriste usluge obrta. 
+zaposlenika. Uz to, želi imati i evidenciju svih trenutnih klijenata s njihovim pripadnim kontakt podacima i lokacijama na kojima će se obavljati usluge obrta.
 
 Dogovaranje usluge s klijentom ne ulazi u opseg programskog rješenja kako vlasnica i dalje želi obavljati razgovor s klijentima osobno kako bi prosudila
 o vrsti potrebne usluge, ali nakon dogovora želi u sustavu evidentirati vrstu usluge, klijenta za kojeg se usluga obavlja, termin izvođenja te zaposlenika/e
