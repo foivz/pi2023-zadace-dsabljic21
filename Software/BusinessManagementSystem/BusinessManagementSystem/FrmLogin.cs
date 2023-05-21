@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace BusinessManagementSystem {
     public partial class FrmLogin : Form {
 
-        string username = "nastavnik";
+        string username = "admin";
         string password = "test";
 
         public FrmLogin() {
@@ -28,8 +28,10 @@ namespace BusinessManagementSystem {
                 MessageBoxIcon.Error);
             } else {
                 if (txtUsername.Text == username && txtPassword.Text == password) {
-                    MessageBox.Show("Dobrodošli!", "Prijavljeni ste",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmEmployees frmStudents = new FrmEmployees();
+                    Hide();
+                    frmStudents.ShowDialog();
+                    Close();
                 } else {
                     MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
