@@ -8,5 +8,9 @@ namespace BusinessManagementSystem.Models {
     public class Administrator : Person {
 
         public string JobTitle { get; set; }
+
+        public override string ToString() {
+            return FirstName + " " + LastName + ", " + JobTitle;
+        }
     }
 }
