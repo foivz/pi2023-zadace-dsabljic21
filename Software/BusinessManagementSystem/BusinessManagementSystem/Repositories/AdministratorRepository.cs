@@ -9,7 +9,6 @@ using DBLayer;
 
 namespace BusinessManagementSystem.Repositories {
     public class AdministratorRepository {
-
         public static Administrator GetAdministrator(int id) {
             Administrator administrator= null;
             string sql = $"SELECT * FROM Administrators WHERE ID_administrator = {id}";
