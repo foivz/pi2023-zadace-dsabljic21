@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Software",
+    "\\Software\\BusinessManagementSystem"
   ],
+  "SelectedNode": "\\Software\\BusinessManagementSystem\\BusinessManagementSystem.sln",
   "PreviewInSolutionExplorer": false
 }

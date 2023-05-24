@@ -25,6 +25,8 @@ namespace BusinessManagementSystem {
             dgvEmployees.DataSource = students;
 
             dgvEmployees.Columns["Id"].DisplayIndex = 0;
+            dgvEmployees.Columns["FirstName"].DisplayIndex = 1;
+            dgvEmployees.Columns["LastName"].DisplayIndex = 2;
             dgvEmployees.Columns["Password"].Visible = false;
         }
     }
