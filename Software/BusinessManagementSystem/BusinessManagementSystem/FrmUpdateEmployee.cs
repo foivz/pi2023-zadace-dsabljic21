@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace BusinessManagementSystem {
     public partial class FrmUpdateEmployee : Form {
@@ -22,6 +23,19 @@ namespace BusinessManagementSystem {
             SetFormText();
             var administrators = AdministratorRepository.GetAdministrators();
             cboAdministrator.DataSource = administrators;
+
+            if (employee != null) {
+                txtId.Text = employee.Id.ToString();
+                txtFirstName.Text = employee.FirstName.ToString();
+                txtLastName.Text = employee.LastName.ToString();
+                txtYearsOfEmployeeExperience.Text = employee.YearsOfEmployeeExperience.ToString();
+                txtPin.Text = employee.Pin.ToString();
+                txtBankAccountNumber.Text = employee.BankAccountNumber.ToString();
+                txtContact.Text = employee.Contact.ToString();
+                txtAddress.Text = employee.Address.ToString();
+                txtUsername.Text = employee.Username.ToString();
+                txtPassword.Text = employee.Password.ToString();
+            }
         }
 
         private void SetFormText() {
@@ -33,7 +47,23 @@ namespace BusinessManagementSystem {
         }
 
         private void cboAdministrator_SelectedIndexChanged(object sender, EventArgs e) {
+        }
 
+        private void btnSave_Click(object sender, EventArgs e) {
+            if (employee == null) {
+                employee = new Employee();
+            }
+            employee.FirstName = txtFirstName.Text;
+            employee.LastName = txtLastName.Text;
+            employee.YearsOfEmployeeExperience = int.Parse(txtYearsOfEmployeeExperience.Text);
+            employee.Pin = txtPin.Text;
+            employee.BankAccountNumber = txtBankAccountNumber.Text;
+            employee.Contact = txtContact.Text;
+            employee.Address = txtAddress.Text;
+            employee.Username = txtUsername.Text;
+            employee.Password = txtPassword.Text;
+            EmployeeRepository.SaveEmployee(employee);
+            this.Close();
         }
     }
 }
