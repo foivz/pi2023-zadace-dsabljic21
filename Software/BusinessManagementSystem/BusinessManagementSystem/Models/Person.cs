@@ -9,10 +9,13 @@ namespace BusinessManagementSystem.Models {
 
     public abstract class Person {
         public int Id { get; set; }
+
         [DisplayName("Ime")]
         public string FirstName { get; set; }
+
         [DisplayName("Prezime")]
         public string LastName { get; set; }
+
         [DisplayName("Korisničko ime")]
         public string Username { get; set; } 
         public string Password { get; set; }

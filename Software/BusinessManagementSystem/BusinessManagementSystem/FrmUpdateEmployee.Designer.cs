@@ -75,6 +75,7 @@
             this.cboAdministrator.Name = "cboAdministrator";
             this.cboAdministrator.Size = new System.Drawing.Size(180, 24);
             this.cboAdministrator.TabIndex = 2;
+            this.cboAdministrator.SelectedIndexChanged += new System.EventHandler(this.cboAdministrator_SelectedIndexChanged);
             // 
             // txtFirstName
             // 
@@ -278,6 +279,7 @@
             this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmUpdateEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodavanje/Izmjena zaposlenika";
             this.Load += new System.EventHandler(this.FrmUpdateEmployee_Load);
             this.ResumeLayout(false);

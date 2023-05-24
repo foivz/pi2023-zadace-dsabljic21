@@ -21,8 +21,8 @@ namespace BusinessManagementSystem {
         }
 
         private void ShowEmployees() {
-            List<Employee> students = EmployeeRepository.GetEmployees();
-            dgvEmployees.DataSource = students;
+            List<Employee> employees = EmployeeRepository.GetEmployees();
+            dgvEmployees.DataSource = employees;
 
             dgvEmployees.Columns["Id"].DisplayIndex = 0;
             dgvEmployees.Columns["FirstName"].DisplayIndex = 1;
@@ -35,6 +35,7 @@ namespace BusinessManagementSystem {
             if (selectedEmployee != null) {
                 FrmUpdateEmployee frmEvaluation = new FrmUpdateEmployee(selectedEmployee);
                 frmEvaluation.ShowDialog();
+                ShowEmployees();
             }
 
         }
