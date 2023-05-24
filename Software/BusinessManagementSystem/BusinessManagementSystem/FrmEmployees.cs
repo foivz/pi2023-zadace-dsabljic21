@@ -29,5 +29,14 @@ namespace BusinessManagementSystem {
             dgvEmployees.Columns["LastName"].DisplayIndex = 2;
             dgvEmployees.Columns["Password"].Visible = false;
         }
+
+        private void btnUpdateEmployee_Click(object sender, EventArgs e) {
+            Employee selectedEmployee = dgvEmployees.CurrentRow.DataBoundItem as Employee;
+            if (selectedEmployee != null) {
+                FrmUpdateEmployee frmEvaluation = new FrmUpdateEmployee(selectedEmployee);
+                frmEvaluation.ShowDialog();
+            }
+
+        }
     }
 }

@@ -41,32 +41,36 @@
             this.dgvEmployees.RowHeadersWidth = 51;
             this.dgvEmployees.RowTemplate.Height = 24;
             this.dgvEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmployees.Size = new System.Drawing.Size(943, 488);
+            this.dgvEmployees.Size = new System.Drawing.Size(923, 394);
             this.dgvEmployees.TabIndex = 0;
             // 
             // btnCreateEmployee
             // 
-            this.btnCreateEmployee.Location = new System.Drawing.Point(865, 545);
+            this.btnCreateEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateEmployee.Location = new System.Drawing.Point(714, 442);
             this.btnCreateEmployee.Name = "btnCreateEmployee";
-            this.btnCreateEmployee.Size = new System.Drawing.Size(90, 40);
+            this.btnCreateEmployee.Size = new System.Drawing.Size(110, 49);
             this.btnCreateEmployee.TabIndex = 1;
             this.btnCreateEmployee.Text = "Unesi zaposlenika";
             this.btnCreateEmployee.UseVisualStyleBackColor = true;
             // 
             // btnUpdateEmployee
             // 
-            this.btnUpdateEmployee.Location = new System.Drawing.Point(753, 545);
+            this.btnUpdateEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdateEmployee.Location = new System.Drawing.Point(598, 442);
             this.btnUpdateEmployee.Name = "btnUpdateEmployee";
-            this.btnUpdateEmployee.Size = new System.Drawing.Size(90, 40);
+            this.btnUpdateEmployee.Size = new System.Drawing.Size(110, 49);
             this.btnUpdateEmployee.TabIndex = 2;
             this.btnUpdateEmployee.Text = "Ažuriraj zaposlenika";
             this.btnUpdateEmployee.UseVisualStyleBackColor = true;
+            this.btnUpdateEmployee.Click += new System.EventHandler(this.btnUpdateEmployee_Click);
             // 
             // btnDeleteEmployee
             // 
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(638, 545);
+            this.btnDeleteEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(830, 442);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(90, 40);
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(110, 49);
             this.btnDeleteEmployee.TabIndex = 3;
             this.btnDeleteEmployee.Text = "Izbriši zaposlenika";
             this.btnDeleteEmployee.UseVisualStyleBackColor = true;
@@ -76,7 +80,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(967, 597);
+            this.ClientSize = new System.Drawing.Size(947, 499);
             this.Controls.Add(this.btnDeleteEmployee);
             this.Controls.Add(this.btnUpdateEmployee);
             this.Controls.Add(this.btnCreateEmployee);

@@ -91,6 +91,7 @@
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Odustani";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblId
             // 
@@ -277,7 +278,8 @@
             this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmUpdateEmployee";
-            this.Text = "FrmUpdateEmployee";
+            this.Text = "Dodavanje/Izmjena zaposlenika";
+            this.Load += new System.EventHandler(this.FrmUpdateEmployee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
