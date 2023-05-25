@@ -13,7 +13,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace BusinessManagementSystem {
     public partial class FrmUpdateEmployee : Form {
+
         private Employee employee;
+        private Administrator administrator;
         public FrmUpdateEmployee(Models.Employee selectedEmployee) {
             InitializeComponent();
             employee = selectedEmployee;
@@ -35,6 +37,7 @@ namespace BusinessManagementSystem {
                 txtAddress.Text = employee.Address.ToString();
                 txtUsername.Text = employee.Username.ToString();
                 txtPassword.Text = employee.Password.ToString();
+                cboAdministrator.Text = employee.Administrator.ToString();
             }
         }
 
@@ -47,6 +50,7 @@ namespace BusinessManagementSystem {
         }
 
         private void cboAdministrator_SelectedIndexChanged(object sender, EventArgs e) {
+            administrator = cboAdministrator.SelectedItem as Administrator;
         }
 
         private void btnSave_Click(object sender, EventArgs e) {
@@ -62,8 +66,9 @@ namespace BusinessManagementSystem {
             employee.Address = txtAddress.Text;
             employee.Username = txtUsername.Text;
             employee.Password = txtPassword.Text;
+            employee.Administrator = administrator;
             EmployeeRepository.SaveEmployee(employee);
-            this.Close();
+            Close();
         }
     }
 }
