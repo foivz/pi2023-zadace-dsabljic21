@@ -53,6 +53,7 @@
             this.btnCreateEmployee.TabIndex = 1;
             this.btnCreateEmployee.Text = "Unesi zaposlenika";
             this.btnCreateEmployee.UseVisualStyleBackColor = true;
+            this.btnCreateEmployee.Click += new System.EventHandler(this.btnCreateEmployee_Click);
             // 
             // btnUpdateEmployee
             // 
@@ -74,6 +75,7 @@
             this.btnDeleteEmployee.TabIndex = 3;
             this.btnDeleteEmployee.Text = "Izbriši zaposlenika";
             this.btnDeleteEmployee.UseVisualStyleBackColor = true;
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
             // 
             // FrmEmployees
             // 

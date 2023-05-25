@@ -29,15 +29,27 @@ namespace BusinessManagementSystem {
             dgvEmployees.Columns["LastName"].DisplayIndex = 2;
             dgvEmployees.Columns["Password"].Visible = false;
         }
+        private void btnCreateEmployee_Click(object sender, EventArgs e) {
+            FrmCreateUpdateEmployee frmCreate = new FrmCreateUpdateEmployee();
+            frmCreate.ShowDialog();
+            ShowEmployees();
+        }
 
         private void btnUpdateEmployee_Click(object sender, EventArgs e) {
             Employee selectedEmployee = dgvEmployees.CurrentRow.DataBoundItem as Employee;
             if (selectedEmployee != null) {
-                FrmUpdateEmployee frmEvaluation = new FrmUpdateEmployee(selectedEmployee);
-                frmEvaluation.ShowDialog();
+                FrmCreateUpdateEmployee frmUpdate = new FrmCreateUpdateEmployee(selectedEmployee);
+                frmUpdate.ShowDialog();
                 ShowEmployees();
             }
+        }
 
+        private void btnDeleteEmployee_Click(object sender, EventArgs e) {
+            Employee selectedEmployee = dgvEmployees.CurrentRow.DataBoundItem as Employee;
+            if (selectedEmployee != null) {
+                EmployeeRepository.DeleteEmployee(selectedEmployee);
+                ShowEmployees();
+            }
         }
     }
 }

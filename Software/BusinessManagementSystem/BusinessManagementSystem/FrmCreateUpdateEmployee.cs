@@ -9,19 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace BusinessManagementSystem {
-    public partial class FrmUpdateEmployee : Form {
+    public partial class FrmCreateUpdateEmployee : Form {
 
         private Employee employee;
         private Administrator administrator;
-        public FrmUpdateEmployee(Models.Employee selectedEmployee) {
+
+        public FrmCreateUpdateEmployee() {
+            InitializeComponent();
+        }
+        public FrmCreateUpdateEmployee(Employee selectedEmployee) {
             InitializeComponent();
             employee = selectedEmployee;
         }
 
-        private void FrmUpdateEmployee_Load(object sender, EventArgs e) {
+        private void FrmCreateUpdateEmployee_Load(object sender, EventArgs e) {
             SetFormText();
             var administrators = AdministratorRepository.GetAdministrators();
             cboAdministrator.DataSource = administrators;
@@ -42,8 +45,9 @@ namespace BusinessManagementSystem {
         }
 
         private void SetFormText() {
-            Text = employee.FirstName + " " + employee.LastName;
+            Text = (employee != null) ? employee.FirstName + " " + employee.LastName : "Unos zaposlenika";
         }
+
 
         private void btnCancel_Click(object sender, EventArgs e) {
             Close();
@@ -59,7 +63,7 @@ namespace BusinessManagementSystem {
             }
             employee.FirstName = txtFirstName.Text;
             employee.LastName = txtLastName.Text;
-            employee.YearsOfEmployeeExperience = int.Parse(txtYearsOfEmployeeExperience.Text);
+            employee.YearsOfEmployeeExperience = txtYearsOfEmployeeExperience.Text == "" ? 0 : int.Parse(txtYearsOfEmployeeExperience.Text);
             employee.Pin = txtPin.Text;
             employee.BankAccountNumber = txtBankAccountNumber.Text;
             employee.Contact = txtContact.Text;
@@ -69,6 +73,10 @@ namespace BusinessManagementSystem {
             employee.Administrator = administrator;
             EmployeeRepository.SaveEmployee(employee);
             Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e) {
+
         }
     }
 }
