@@ -51,5 +51,24 @@ namespace BusinessManagementSystem {
                 ShowEmployees();
             }
         }
+
+        private void lblFilterUsername_Click(object sender, EventArgs e) {
+
+        }
+
+        private void btnFilterUsername_Click(object sender, EventArgs e) {
+            string username = txtFilterUsername.Text;
+            List<Employee> employees = EmployeeRepository.FilterByUsername(username);
+            dgvEmployees.DataSource = employees;
+
+            dgvEmployees.Columns["Id"].DisplayIndex = 0;
+            dgvEmployees.Columns["FirstName"].DisplayIndex = 1;
+            dgvEmployees.Columns["LastName"].DisplayIndex = 2;
+            dgvEmployees.Columns["Password"].Visible = false;
+        }
+
+        private void btnRemoveFilter_Click(object sender, EventArgs e) {
+            ShowEmployees();
+        }
     }
 }

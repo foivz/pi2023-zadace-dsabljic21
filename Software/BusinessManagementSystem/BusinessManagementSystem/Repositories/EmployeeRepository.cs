@@ -59,6 +59,20 @@ namespace BusinessManagementSystem.Repositories {
             DB.CloseConnection();
         }
 
+        public static List<Employee> FilterByUsername(string username) {
+            List<Employee> employees = new List<Employee>();
+            string sql = $"SELECT * FROM Employees WHERE Username = '{username}'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read()) {
+                Employee student = CreateObject(reader);
+                employees.Add(student);
+            }
+            reader.Close();
+            DB.CloseConnection();
+            return employees;
+        }
+
         private static Employee CreateObject(SqlDataReader reader) {
             int id = int.Parse(reader["ID_employee"].ToString());
             string firstName = reader["FirstName"].ToString();
