@@ -38,7 +38,7 @@ namespace BusinessManagementSystem.Repositories {
             return employees;
         }
 
-        public static int SaveEmployee(Employee employee) {
+        public static void SaveEmployee(Employee employee) {
             string sql = "";
             DB.OpenConnection();
             if (employee.Id == 0)
@@ -48,18 +48,15 @@ namespace BusinessManagementSystem.Repositories {
               {
                 sql = $"UPDATE Employees SET FirstName = '{employee.FirstName}', LastName = '{employee.LastName}', YearsOfEmployeeExperience = {employee.YearsOfEmployeeExperience}, PIN = '{employee.Pin}', BankAccountNumber = '{employee.BankAccountNumber}', Contact = '{employee.Contact}', Address = '{employee.Address}', Password = '{employee.Password}', Username = '{employee.Username}', ID_administrator = '{employee.Administrator.Id}' WHERE ID_employee = {employee.Id}";
             }
-            var execute = DB.ExecuteCommand(sql);
+            DB.ExecuteCommand(sql);
             DB.CloseConnection();
-
-            return execute;
         }
 
-        public static int DeleteEmployee(Employee employee) {
+        public static void DeleteEmployee(Employee employee) {
             string sql = "DELETE FROM Employees WHERE Id_employee = " + employee.Id;
             DB.OpenConnection();
-            var execute = DB.ExecuteCommand(sql);
+            DB.ExecuteCommand(sql);
             DB.CloseConnection();
-            return execute;
         }
 
         private static Employee CreateObject(SqlDataReader reader) {
