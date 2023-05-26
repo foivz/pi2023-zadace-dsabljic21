@@ -12,5 +12,9 @@ namespace BusinessManagementSystem.Models {
         public override string ToString() {
             return FirstName + " " + LastName + ", " + JobTitle;
         }
+
+        public bool CheckPassword(string password) {
+            return Password == password;
+        }
     }
 }

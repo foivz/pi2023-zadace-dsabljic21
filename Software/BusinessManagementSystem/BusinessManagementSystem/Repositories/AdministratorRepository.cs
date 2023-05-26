@@ -6,14 +6,24 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessManagementSystem.Models;
 using DBLayer;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BusinessManagementSystem.Repositories {
     public class AdministratorRepository {
+        public static Administrator GetAdministrator(string username) {
+            string sql = $"SELECT * FROM Administrators WHERE Username = '{username}'";
+            return FetchAdministrator(sql);
+        }
+
         public static Administrator GetAdministrator(int id) {
-            Administrator administrator= null;
             string sql = $"SELECT * FROM Administrators WHERE ID_administrator = {id}";
+            return FetchAdministrator(sql);
+        }
+
+        private static Administrator FetchAdministrator(string sql) {
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
+            Administrator administrator = null;
             if (reader.HasRows) {
                 reader.Read();
                 administrator = CreateObject(reader);

@@ -1,7 +1,10 @@
-﻿using System;
+﻿using BusinessManagementSystem.Models;
+using BusinessManagementSystem.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,8 +15,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace BusinessManagementSystem {
     public partial class FrmLogin : Form {
 
-        string username = "admin";
-        string password = "test";
+        // string username = "admin";
+        // string password = "test";
+
+        public static Administrator LoggedAdministrator { get; set; }
 
         public FrmLogin() {
             InitializeComponent();
@@ -27,7 +32,8 @@ namespace BusinessManagementSystem {
                 MessageBox.Show("Lozinka nije unesena!", "Problem", MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
             } else {
-                if (txtUsername.Text == username && txtPassword.Text == password) {
+                LoggedAdministrator = AdministratorRepository.GetAdministrator(txtUsername.Text);
+                if (LoggedAdministrator != null && LoggedAdministrator.CheckPassword(txtPassword.Text)) {
                     FrmEmployees frmStudents = new FrmEmployees();
                     Hide();
                     frmStudents.ShowDialog();
