@@ -9,17 +9,34 @@ using DBLayer;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BusinessManagementSystem.Repositories {
+
     public class AdministratorRepository {
+
+        /// <summary>
+        /// Dohvati administratora s danim korisničkim imenom
+        /// </summary>
+        /// <param name="username">Korisničko ime administratora</param>
+        /// <returns>Objekt administratora s danim korisničkim imenom</returns>
         public static Administrator GetAdministrator(string username) {
             string sql = $"SELECT * FROM Administrators WHERE Username = '{username}'";
             return FetchAdministrator(sql);
         }
 
+        /// <summary>
+        /// Dohvati administratora s danim korisničkim imenom
+        /// </summary>
+        /// <param name="id">ID administratora</param>
+        /// <returns>Objekt administratora s danim ID-em</returns>
         public static Administrator GetAdministrator(int id) {
             string sql = $"SELECT * FROM Administrators WHERE ID_administrator = {id}";
             return FetchAdministrator(sql);
         }
 
+        /// <summary>
+        /// Dohvaća administratora izvršavanjem danog sql upita
+        /// </summary>
+        /// <param name="sql">sql upit nad tablicom Administrators</param>
+        /// <returns>Objekt klase Administrator</returns>
         private static Administrator FetchAdministrator(string sql) {
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
@@ -33,6 +50,10 @@ namespace BusinessManagementSystem.Repositories {
             return administrator;
         }
 
+        /// <summary>
+        /// Dohvaća sve administratore iz baze i vraća ih u obliku generičke liste.
+        /// </summary>
+        /// <returns>Lista administratora</returns>
         public static List<Administrator> GetAdministrators() {
             List<Administrator> administrtors = new List<Administrator>();
             string sql = "SELECT * FROM Administrators";
@@ -47,6 +68,11 @@ namespace BusinessManagementSystem.Repositories {
             return administrtors;
         }
 
+        /// <summary>
+        /// Kreira novu instancu klase Administrator
+        /// </summary>
+        /// <param name="reader">Reader objekt sa podacima zaposlenika</param>
+        /// <returns>Vraća kreirani objekt administratora</returns>
         private static Administrator CreateObject(SqlDataReader reader) {
             int id = int.Parse(reader["ID_administrator"].ToString());
             string firstName = reader["FirstName"].ToString();

@@ -9,7 +9,14 @@ using BusinessManagementSystem.Models;
 using DBLayer;
 
 namespace BusinessManagementSystem.Repositories {
+
     public class EmployeeRepository {
+
+        /// <summary>
+        /// Kreira novi tim sa podacima iz reader objekta
+        /// </summary>
+        /// <param name="id">ID zaposlenika u bazi</param>
+        /// <returns>Kreiranu instancu zaposlenika</returns>
         public static Employee GetEmployee(int id) {
             Employee employee = null;
             string sql = $"SELECT * FROM Employees WHERE ID_employee = {id}";
@@ -24,6 +31,10 @@ namespace BusinessManagementSystem.Repositories {
             return employee;
         }
 
+        /// <summary>
+        /// Dohvaća sve zaposlenike iz baze podataka i vraća ih u obliku liste
+        /// </summary>
+        /// <returns>Lista zaposlenika</returns>
         public static List<Employee> GetEmployees() {
             List<Employee> employees = new List<Employee>();
             string sql = "SELECT * FROM Employees";
@@ -38,6 +49,10 @@ namespace BusinessManagementSystem.Repositories {
             return employees;
         }
 
+        /// <summary>
+        /// Sprema vrijednosti objekta u bazu podataka
+        /// </summary>
+        /// <param name="employee">Referenca na instancu čiji se podaci spremaju u bazu</param>
         public static void SaveEmployee(Employee employee) {
             string sql = "";
             DB.OpenConnection();
@@ -52,6 +67,10 @@ namespace BusinessManagementSystem.Repositories {
             DB.CloseConnection();
         }
 
+        /// <summary>
+        /// Briše objekt iz baze podataka
+        /// </summary>
+        /// <param name="employee">Referenca na instancu čiji se podaci brišu iz baze</param>
         public static void DeleteEmployee(Employee employee) {
             string sql = "DELETE FROM Employees WHERE Id_employee = " + employee.Id;
             DB.OpenConnection();
@@ -59,6 +78,11 @@ namespace BusinessManagementSystem.Repositories {
             DB.CloseConnection();
         }
 
+        /// <summary>
+        /// Dohvaća zaposlenika s danim korisničkim imenom
+        /// </summary>
+        /// <param name="username">Korisničko ime uneseno u polje za filtriranje</param>
+        /// <returns>Vraća listu zaposlenika s uesenim korisničkim imenom</returns>
         public static List<Employee> FilterByUsername(string username) {
             List<Employee> employees = new List<Employee>();
             string sql = $"SELECT * FROM Employees WHERE Username = '{username}'";
@@ -73,6 +97,11 @@ namespace BusinessManagementSystem.Repositories {
             return employees;
         }
 
+        /// <summary>
+        /// Kreira novu instancu klase Employee
+        /// </summary>
+        /// <param name="reader">Reader objekt sa podacima zaposlenika</param>
+        /// <returns>Vraća kreirani objekt zaposlenika</returns>
         private static Employee CreateObject(SqlDataReader reader) {
             int id = int.Parse(reader["ID_employee"].ToString());
             string firstName = reader["FirstName"].ToString();

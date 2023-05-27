@@ -23,7 +23,7 @@ namespace BusinessManagementSystem.Models {
         /// <summary>
         /// Metoda koja nadjačava ToString metodu
         /// </summary>
-        /// <returns>Ime i prezime osobe</returns>
+        /// <returns>Vraća ime i prezime osobe</returns>
         public override string ToString() {
             return FirstName + " " + LastName;
         }

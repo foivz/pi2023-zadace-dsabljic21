@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BusinessManagementSystem.Models {
+
     public class Employee : Person {
 
         [DisplayName("Godine staža")]
