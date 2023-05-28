@@ -16,14 +16,27 @@ namespace BusinessManagementSystem {
         private Employee employee;
         private Administrator administrator;
 
+        /// <summary>
+        /// Konstruktor
+        /// </summary>
         public FrmCreateUpdateEmployee() {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Konstruktor koji prima selektiranog zaposlenika kao parametar.
+        /// </summary>
+        /// <param name="selectedEmployee">Odabrani zaposlenik na glavnoj formi</param>
         public FrmCreateUpdateEmployee(Employee selectedEmployee) {
             InitializeComponent();
             employee = selectedEmployee;
         }
 
+        /// <summary>
+        /// Metoda koja ispunjava formu podacima odabranog zaposlenika u slučaju ažuriranja.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmCreateUpdateEmployee_Load(object sender, EventArgs e) {
             SetFormText();
             var administrators = AdministratorRepository.GetAdministrators();
@@ -44,19 +57,38 @@ namespace BusinessManagementSystem {
             }
         }
 
+        /// <summary>
+        /// Postavlja tekst/naslov forme ovisno o odabranoj opciji.
+        /// </summary>
         private void SetFormText() {
             Text = (employee != null) ? employee.FirstName + " " + employee.LastName : "Unos zaposlenika";
         }
 
 
+        /// <summary>
+        /// Rukuje događajem odabira gumba Odustani i zatvara formu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancel_Click(object sender, EventArgs e) {
             Close();
         }
 
+        /// <summary>
+        /// Rukuje događajem promjene administratora za odabranog zaposlenika.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cboAdministrator_SelectedIndexChanged(object sender, EventArgs e) {
             administrator = cboAdministrator.SelectedItem as Administrator;
         }
 
+        /// <summary>
+        /// Rukuje događajem odabira opcije spremi kreirajući/ažurirajući 
+        /// objekt zaposlenika i spremanjem u bazu podataka.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e) {
             if (employee == null) {
                 employee = new Employee();

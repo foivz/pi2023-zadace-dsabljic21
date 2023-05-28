@@ -20,10 +20,19 @@ namespace BusinessManagementSystem {
 
         public static Administrator LoggedAdministrator { get; set; }
 
+        /// <summary>
+        /// Konstruktor
+        /// </summary>
         public FrmLogin() {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Kod prijave provjerava valjanost unosa te podudaraju li se uneseni korisnički 
+        /// podaci s onima u bazi podataka.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLogin_Click(object sender, EventArgs e) {
             if (txtUsername.Text == "") {
                 MessageBox.Show("Korisničko ime nije uneseno!", "Problem",
