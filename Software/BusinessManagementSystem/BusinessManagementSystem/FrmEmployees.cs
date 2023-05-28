@@ -98,12 +98,17 @@ namespace BusinessManagementSystem {
         private void btnFilterUsername_Click(object sender, EventArgs e) {
             string username = txtFilterUsername.Text;
             List<Employee> employees = EmployeeRepository.FilterByUsername(username);
-            dgvEmployees.DataSource = employees;
+            if (employees.Count == 0) {
+                MessageBox.Show("Zaposlenik s unesenim korisničkim imenom ne postoji!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else {
+                dgvEmployees.DataSource = employees;
 
-            dgvEmployees.Columns["Id"].DisplayIndex = 0;
-            dgvEmployees.Columns["FirstName"].DisplayIndex = 1;
-            dgvEmployees.Columns["LastName"].DisplayIndex = 2;
-            dgvEmployees.Columns["Password"].Visible = false;
+                dgvEmployees.Columns["Id"].DisplayIndex = 0;
+                dgvEmployees.Columns["FirstName"].DisplayIndex = 1;
+                dgvEmployees.Columns["LastName"].DisplayIndex = 2;
+                dgvEmployees.Columns["Password"].Visible = false;
+            }
         }
 
         /// <summary>
