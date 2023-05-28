@@ -97,7 +97,7 @@ namespace BusinessManagementSystem {
                 MessageBox.Show("Ime zaposlenika nije uneseno!", "Problem", MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
             } else if (txtLastName.Text == "") {
-                MessageBox.Show("Prezime zaposlenima nije uneseno!", "Problem", MessageBoxButtons.OK,
+                MessageBox.Show("Prezime zaposlenika nije uneseno!", "Problem", MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
             } else if (txtYearsOfEmployeeExperience.Text == "") {
                 MessageBox.Show("Radni staž zaposlenika nije unesen!", "Problem", MessageBoxButtons.OK,
@@ -116,6 +116,9 @@ namespace BusinessManagementSystem {
                 MessageBoxIcon.Error);
             } else if (txtUsername.Text == "") {
                 MessageBox.Show("Korisničko ime zaposlenika nije uneseno!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else if (EmployeeRepository.FilterByUsername(txtUsername.Text).Count != 0 && employee == null) {
+                MessageBox.Show("Korisničko ime zaposlenika nije dostupno!", "Problem", MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
             } else if (txtPassword.Text == "") {
                 MessageBox.Show("Lozinka zaposlenika nije unesena!", "Problem", MessageBoxButtons.OK,
