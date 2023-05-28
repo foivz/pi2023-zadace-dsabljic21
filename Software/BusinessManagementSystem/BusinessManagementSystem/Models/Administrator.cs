@@ -11,7 +11,7 @@ namespace BusinessManagementSystem.Models {
         public string JobTitle { get; set; }
 
         /// <summary>
-        /// Metoda koja nadjačava ToString metodu
+        /// Metoda koja nadjačava ToString metodu.
         /// </summary>
         /// <returns>Vraća imee, prezime i ulogu administratora</returns>
         public override string ToString() {
@@ -19,7 +19,7 @@ namespace BusinessManagementSystem.Models {
         }
 
         /// <summary>
-        /// Metoda za provjeru lozinke administratora
+        /// Metoda za provjeru lozinke administratora.
         /// </summary>
         /// <param name="password">Unesena lozinka</param>
         /// <returns>Logička vrijednost valjanosti unesene lozinke</returns>

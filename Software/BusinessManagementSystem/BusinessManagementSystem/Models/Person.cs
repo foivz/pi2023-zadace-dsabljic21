@@ -21,7 +21,7 @@ namespace BusinessManagementSystem.Models {
         public string Password { get; set; }
 
         /// <summary>
-        /// Metoda koja nadjačava ToString metodu
+        /// Metoda koja nadjačava ToString metodu.
         /// </summary>
         /// <returns>Vraća ime i prezime osobe</returns>
         public override string ToString() {

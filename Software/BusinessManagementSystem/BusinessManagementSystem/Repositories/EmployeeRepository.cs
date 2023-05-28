@@ -13,7 +13,7 @@ namespace BusinessManagementSystem.Repositories {
     public class EmployeeRepository {
 
         /// <summary>
-        /// Kreira novi tim sa podacima iz reader objekta
+        /// Kreira novi tim sa podacima iz reader objekta.
         /// </summary>
         /// <param name="id">ID zaposlenika u bazi</param>
         /// <returns>Kreiranu instancu zaposlenika</returns>
@@ -32,7 +32,7 @@ namespace BusinessManagementSystem.Repositories {
         }
 
         /// <summary>
-        /// Dohvaća sve zaposlenike iz baze podataka i vraća ih u obliku liste
+        /// Dohvaća sve zaposlenike iz baze podataka i vraća ih u obliku liste.
         /// </summary>
         /// <returns>Lista zaposlenika</returns>
         public static List<Employee> GetEmployees() {
@@ -50,7 +50,7 @@ namespace BusinessManagementSystem.Repositories {
         }
 
         /// <summary>
-        /// Sprema vrijednosti objekta u bazu podataka
+        /// Sprema promjene instance zaposlenika u bazu podataka.
         /// </summary>
         /// <param name="employee">Referenca na instancu čiji se podaci spremaju u bazu</param>
         public static void SaveEmployee(Employee employee) {
@@ -68,7 +68,7 @@ namespace BusinessManagementSystem.Repositories {
         }
 
         /// <summary>
-        /// Briše objekt iz baze podataka
+        /// Briše zapis iz baze podataka.
         /// </summary>
         /// <param name="employee">Referenca na instancu čiji se podaci brišu iz baze</param>
         public static void DeleteEmployee(Employee employee) {
@@ -79,7 +79,7 @@ namespace BusinessManagementSystem.Repositories {
         }
 
         /// <summary>
-        /// Dohvaća zaposlenika s danim korisničkim imenom
+        /// Dohvaća zaposlenika s danim korisničkim imenom.
         /// </summary>
         /// <param name="username">Korisničko ime uneseno u polje za filtriranje</param>
         /// <returns>Vraća listu zaposlenika s uesenim korisničkim imenom</returns>
@@ -98,7 +98,7 @@ namespace BusinessManagementSystem.Repositories {
         }
 
         /// <summary>
-        /// Kreira novu instancu klase Employee
+        /// Kreira novu instancu klase Employee s podacima pročitanim iz reader objekta.
         /// </summary>
         /// <param name="reader">Reader objekt sa podacima zaposlenika</param>
         /// <returns>Vraća kreirani objekt zaposlenika</returns>

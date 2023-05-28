@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BusinessManagementSystem {
+
     public partial class FrmLogin : Form {
 
         // string username = "admin";

@@ -13,7 +13,7 @@ namespace BusinessManagementSystem.Repositories {
     public class AdministratorRepository {
 
         /// <summary>
-        /// Dohvati administratora s danim korisničkim imenom
+        /// Dohvaća administratora s danim korisničkim imenom.
         /// </summary>
         /// <param name="username">Korisničko ime administratora</param>
         /// <returns>Objekt administratora s danim korisničkim imenom</returns>
@@ -23,7 +23,7 @@ namespace BusinessManagementSystem.Repositories {
         }
 
         /// <summary>
-        /// Dohvati administratora s danim korisničkim imenom
+        /// Dohvaća administratora s danim ID-em.
         /// </summary>
         /// <param name="id">ID administratora</param>
         /// <returns>Objekt administratora s danim ID-em</returns>
@@ -33,7 +33,7 @@ namespace BusinessManagementSystem.Repositories {
         }
 
         /// <summary>
-        /// Dohvaća administratora izvršavanjem danog sql upita
+        /// Dohvaća administratora izvršavanjem danog sql upita.
         /// </summary>
         /// <param name="sql">sql upit nad tablicom Administrators</param>
         /// <returns>Objekt klase Administrator</returns>
@@ -69,7 +69,7 @@ namespace BusinessManagementSystem.Repositories {
         }
 
         /// <summary>
-        /// Kreira novu instancu klase Administrator
+        /// Kreira novu instancu klase Administrator.
         /// </summary>
         /// <param name="reader">Reader objekt sa podacima zaposlenika</param>
         /// <returns>Vraća kreirani objekt administratora</returns>

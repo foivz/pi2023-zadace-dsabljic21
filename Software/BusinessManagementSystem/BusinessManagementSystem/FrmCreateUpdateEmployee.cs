@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BusinessManagementSystem {
+
     public partial class FrmCreateUpdateEmployee : Form {
 
         private Employee employee;
