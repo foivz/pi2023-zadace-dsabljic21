@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -85,26 +86,56 @@ namespace BusinessManagementSystem {
 
         /// <summary>
         /// Rukuje događajem odabira opcije spremi kreirajući/ažurirajući 
-        /// objekt zaposlenika i spremanjem u bazu podataka.
+        /// objekt zaposlenika i spremanjem u bazu podataka. Također provjerava 
+        /// valjanost unosa informacija o zaposleniku.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e) {
-            if (employee == null) {
-                employee = new Employee();
+            if (txtFirstName.Text == "") {
+                MessageBox.Show("Ime zaposlenika nije uneseno!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else if (txtLastName.Text == "") {
+                MessageBox.Show("Prezime zaposlenima nije uneseno!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else if (txtYearsOfEmployeeExperience.Text == "") {
+                MessageBox.Show("Radni staž zaposlenika nije unesen!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else if (txtPin.Text == "") {
+                MessageBox.Show("OIB zaposlenika nije unesen!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else if (txtBankAccountNumber.Text == "") {
+                MessageBox.Show("IBAN zaposlenika nije unesen!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else if (txtContact.Text == "") {
+                MessageBox.Show("Kontakt broj zaposlenika nije unesen!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else if (txtAddress.Text == "") {
+                MessageBox.Show("Adresa zaposlenika nije unesena!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else if (txtUsername.Text == "") {
+                MessageBox.Show("Korisničko ime zaposlenika nije uneseno!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else if (txtPassword.Text == "") {
+                MessageBox.Show("Lozinka zaposlenika nije unesena!", "Problem", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+            } else {
+                if (employee == null) {
+                    employee = new Employee();
+                }
+                employee.FirstName = txtFirstName.Text;
+                employee.LastName = txtLastName.Text;
+                employee.YearsOfEmployeeExperience = txtYearsOfEmployeeExperience.Text == "" ? 0 : int.Parse(txtYearsOfEmployeeExperience.Text);
+                employee.Pin = txtPin.Text;
+                employee.BankAccountNumber = txtBankAccountNumber.Text;
+                employee.Contact = txtContact.Text;
+                employee.Address = txtAddress.Text;
+                employee.Username = txtUsername.Text;
+                employee.Password = txtPassword.Text;
+                employee.Administrator = administrator;
+                EmployeeRepository.SaveEmployee(employee);
+                Close();
             }
-            employee.FirstName = txtFirstName.Text;
-            employee.LastName = txtLastName.Text;
-            employee.YearsOfEmployeeExperience = txtYearsOfEmployeeExperience.Text == "" ? 0 : int.Parse(txtYearsOfEmployeeExperience.Text);
-            employee.Pin = txtPin.Text;
-            employee.BankAccountNumber = txtBankAccountNumber.Text;
-            employee.Contact = txtContact.Text;
-            employee.Address = txtAddress.Text;
-            employee.Username = txtUsername.Text;
-            employee.Password = txtPassword.Text;
-            employee.Administrator = administrator;
-            EmployeeRepository.SaveEmployee(employee);
-            Close();
         }
 
         private void label1_Click(object sender, EventArgs e) {
